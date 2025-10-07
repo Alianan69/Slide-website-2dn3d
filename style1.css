@@ -1,0 +1,135 @@
+*{
+	margin: 0;
+	padding: 0;
+	background-size: cover;
+}
+.load
+{
+	animation: slide 10s;
+}
+.slider
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100vh;
+    animation: slide 10s infinite;
+}
+.content
+{
+	color: #fff;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0, 0.5);
+}
+.principal
+{
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	letter-spacing: 5px;
+	text-align: center;
+}
+.principal h1
+{
+	font-size: 70px;
+	margin-bottom: 20px;
+}
+.principal p
+{
+   font-size: 30px;
+}
+@keyframes slide 
+{
+	0%{
+        background-image: url(1.jpg);
+	}
+	20%{
+        background-image: url(1.jpg);
+	  }
+	20.01%{
+        background-image: url(2.jpg);
+	}
+	40%{
+        background-image: url(2.jpg);
+	  }
+	40.01%{
+        background-image: url(3.jpg);
+	}
+	60%{
+        background-image: url(3.jpg);
+	  }
+	60.01%{
+        background-image: url(4.jpg);
+	}
+	80%{
+        background-image: url(4.jpg);
+	  }
+	80.01%{
+        background-image: url(5.jpg);
+	}
+	100%{
+        background-image: url(5.jpg);
+	  }
+
+}
+a 
+{
+	position: relative;
+	padding: 20px;
+	color: #fff;
+	font-size: 20px;
+	font-family: sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	transition: 0.5s;
+}
+a:hover
+{
+	background: #2196f3;
+	transition-delay: 2s;
+	box-shadow: -30px 30px 50px rgba(0,0,0,.4);
+	transform: rotate(-30deg) skew(25deg);
+}
+a:before,
+a:after
+{
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	background: #fff;
+	pointer-events: none;
+	transform-style: linear;
+	transition-property: width,opacity,transform,box-shadow;
+	transition-duration: 0.5s;
+}
+a:before
+{
+	top: 0;
+	left: 0;
+}
+a:after
+{
+	top: 0;
+	right: 0;
+}
+a:hover:before
+{
+	width: 100%;
+	opacity: 0.1;
+	transform: translate(5px,-5px);
+	box-shadow: +2px 2pc 2px rgba(0,0,0,.1);
+	transition-delay: 0s,0.5s,1s,1.5s;
+}
+a:hover:after
+{
+	width: 100%;
+	opacity: 0.1;
+	transform: translate(10px,-10px);
+	box-shadow: +2px 2pc 2px rgba(0,0,0,.1);
+	transition-delay: 0s,0.5s,1s,1.5s;
+}
